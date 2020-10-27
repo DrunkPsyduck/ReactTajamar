@@ -9,11 +9,17 @@ function Saludos(props) {
 
   let name = props.nombre;
   let age = props.edad;
+  const botonPulsado = () => {
+    console.log(name + " has pulsado el botoón");
+  };
   return (
     <div>
       <h2>
         Hola, {name}, con edad {age}
       </h2>
+      <button onClick={botonPulsado}>Pulsar</button>
+      {/* O también se puede llamar con:
+       *<button onClick={() => botonPulsado()}>Pulsar</button>!  */}
     </div>
   );
 }
