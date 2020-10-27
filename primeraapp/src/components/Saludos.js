@@ -10,16 +10,27 @@ function Saludos(props) {
   let name = props.nombre;
   let age = props.edad;
   const botonPulsado = () => {
-    console.log(name + " has pulsado el botoón");
+    console.log(name + " has pulsado el botón");
+  };
+  const sumarNumeros = (num1, num2) => {
+    let suma = num1 + num2;
+    console.log(suma);
+  };
+  const mostrarMensaje = () => {
+    return <h1> Hola Mundo</h1>;
   };
   return (
     <div>
+      {sumarNumeros(5, 15)}
       <h2>
         Hola, {name}, con edad {age}
       </h2>
       <button onClick={botonPulsado}>Pulsar</button>
+      <button onClick={() => sumarNumeros(14, 12)}>Pulsar</button>
       {/* O también se puede llamar con:
-       *<button onClick={() => botonPulsado()}>Pulsar</button>!  */}
+       *<button onClick={() => botonPulsado()}>Pulsar</button>!  Con esta función lambda se ejecuta cuando se hace el evento, 
+       si no se ejecuta directamentes*/}
+      {mostrarMensaje()}
     </div>
   );
 }
