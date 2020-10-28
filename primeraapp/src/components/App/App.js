@@ -1,5 +1,6 @@
 import "./../../App.css";
 import Saludo from "../Saludos";
+import SumarNumeros from "../SumarNumeros";
 
 function App() {
   const metodoPadre = (descripcion) => {
@@ -9,8 +10,7 @@ function App() {
   return (
     <div className="App">
       <Saludo nombre="Ducky McDuck sr" edad="50" metodo={metodoPadre} />
-      <Saludo nombre="Ducky McDuck jr" edad="30" metodo={metodoPadre} />
-      <Saludo nombre="Ducky McDuck III" edad="10" metodo={metodoPadre} />
+      <SumarNumeros numero1="12" numero2="8" />
     </div>
   );
 }
