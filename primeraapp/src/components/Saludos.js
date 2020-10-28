@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom";
 
 function Saludos(props) {
@@ -6,13 +6,9 @@ function Saludos(props) {
   /** 
    let nombre = props.nombre;
    let mensaje = props.mensaje; 
-  *? Es lo mismo que la siguiente línea
+  *? Es lo mismo que:
    */
-
   const { nombre, edad, metodo } = props;
-
-  /*  let name = props.nombre;
-  let age = props.edad; */
   const botonPulsado = () => {
     console.log(nombre + " has pulsado el botón");
     ejemplo = "Don't Tread On Me";
@@ -38,8 +34,7 @@ function Saludos(props) {
       <button onClick={() => botonPulsado()}>Pulsar</button>
       <button onClick={() => sumarNumeros(14, 12)}>Sumar</button>
       <button onClick={() => metodo(nombre + " " + edad)}>Método padre</button>
-      {/* O también se puede llamar con:
-       *<button onClick={() => botonPulsado()}>Pulsar</button>!  Con esta función lambda se ejecuta cuando se hace el evento, 
+      {/* Con esta función lambda se ejecuta cuando se hace el evento, 
        si no se ejecuta directamentes*/}
       {mostrarMensaje()}
     </div>
