@@ -32,7 +32,7 @@ function Car(props) {
     };
     const frenarCoche = () => {
         if (estado && velocidad > 0) {
-            setVelocidad(velocidad - 20);
+            setVelocidad(velocidad - coche.aceleracion);
         }
     };
 
