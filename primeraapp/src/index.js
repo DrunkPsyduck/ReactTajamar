@@ -2,11 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
+import Car from "./components/Car";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Car
+      marca="Nissan"
+      modelo="Fairlady Z"
+      velocidadMaxima="180"
+      aceleracion="15"
+    />
+
+    <Car
+      marca="Toyota"
+      modelo="Corolla AE86 Sprinter Trueno GP APEX"
+      velocidadMaxima="175"
+      aceleracion="25"
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
