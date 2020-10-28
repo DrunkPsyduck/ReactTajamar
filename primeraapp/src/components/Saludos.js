@@ -7,7 +7,7 @@ function Saludos(props) {
    let nombre = props.nombre;
    let mensaje = props.mensaje; 
   *? Es lo mismo que la siguiente línea
-   * const { mensaje, edad } = props;*/
+   */
 
   const { nombre, edad, metodo } = props;
 
@@ -16,7 +16,9 @@ function Saludos(props) {
   const botonPulsado = () => {
     console.log(nombre + " has pulsado el botón");
     ejemplo = "Don't Tread On Me";
+    Saludos.ejemplo = ejemplo;
   };
+
   const sumarNumeros = (num1, num2) => {
     let suma = num1 + num2;
     console.log(suma);
