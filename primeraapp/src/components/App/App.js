@@ -1,5 +1,6 @@
 import "./../../App.css";
 import Saludo from "../Saludos";
+import Contador from "../Contador";
 import SumarNumeros from "../SumarNumeros";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         color="aquamarine"
         realizarSuma={sumarPadre}
       />
+      <Contador />
     </div>
   );
 }
