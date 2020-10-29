@@ -64,7 +64,9 @@ class Comics extends React.Component {
         })}
         {this.state.favorito && (
           <React.Fragment>
-            <h1 style={{ color: "Fuchsia" }}>{this.state.favorito.titulo}</h1>
+            <h1 style={{ color: "Fuchsia" }}>
+              Favorito, {this.state.favorito.titulo}
+            </h1>
             <img src={this.state.favorito.imagen} />
             <h1>{this.state.favorito.descripcion}</h1>
           </React.Fragment>
