@@ -7,7 +7,8 @@ import PrimeraClase from "./components/primeraClase/PrimeraClase";
 
 ReactDOM.render(
   <React.StrictMode>
-    <PrimeraClase />
+    <PrimeraClase titulo="Hola holita vecinito" />
+    <PrimeraClase titulo="Hola mundo cruel" />
   </React.StrictMode>,
   document.getElementById("root")
 );
