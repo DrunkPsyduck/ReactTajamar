@@ -18,7 +18,7 @@ class PrimeraClase extends React.Component {
 
   // ? Se pueden usa variables de estado para dibujar
   // ? Las variables de estado deben ser declaradas para poder ser utilizadas
-  //? state = {variable: 1. variableN: n}
+  //? state = {variable: 1. variableN: n
   //? Se puede combinar props que se reciben con staet
   state = { valor: parseInt(this.props.inicio) };
   incrementarEstado = () => {
