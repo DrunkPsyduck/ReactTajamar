@@ -3,7 +3,7 @@ import Numero from "./Numero";
 
 class Numeros extends React.Component {
   state = {
-    numeros: [1, 2, 3, 10],
+    numeros: [2, 4, 8, 16],
     suma: 0,
   };
 

@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
-import Numeros from "./components/numeros/Numeros";
+import Comics from "./components/comics/Comics";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Numeros />
+    <Comics />
   </React.StrictMode>,
   document.getElementById("root")
 );
