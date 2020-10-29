@@ -42,6 +42,13 @@ class Comics extends React.Component {
         descripcion: "Murcielago",
       },
     ],
+    favorito: null,
+  };
+
+  seleccionarComic = (comic) => {
+    this.setState({
+      favorito: comic,
+    });
   };
   render() {
     return (
@@ -50,12 +57,18 @@ class Comics extends React.Component {
           return (
             <Comic
               key={index}
-              titulo={comic.titulo}
-              imagen={comic.imagen}
-              descripcion={comic.descripcion}
+              comic={comic}
+              seleccionarComic={this.seleccionarComic}
             />
           );
         })}
+        {this.state.favorito && (
+          <React.Fragment>
+            <h1 style={{ color: "Fuchsia" }}>{this.state.favorito.titulo}</h1>
+            <img src={this.state.favorito.imagen} />
+            <h1>{this.state.favorito.descripcion}</h1>
+          </React.Fragment>
+        )}
       </div>
     );
   }
