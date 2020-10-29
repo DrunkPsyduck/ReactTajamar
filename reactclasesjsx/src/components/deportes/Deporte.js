@@ -14,7 +14,7 @@ class Deporte extends React.Component {
       <React.Fragment>
         <li style={{ color: "blue" }} key={this.props.index}>
           {this.props.deporte}
-          <button onClick={this.seleccionarDeporte}>Seleccionar deporte</button>
+          <button onClick={this.seleccionarDeporte}>Seleccionar Deporte</button>
         </li>
         <span style={{ color: "red" }}>{this.state.seleccionado}</span>
       </React.Fragment>

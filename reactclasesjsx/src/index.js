@@ -3,14 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
-import PrimeraClase from "./components/primeraClase/PrimeraClase";
-import Deportes from "./components/deportes/Deportes";
+import Numeros from "./components/numeros/Numeros";
 
 ReactDOM.render(
   <React.StrictMode>
-    <PrimeraClase titulo="Hola holita vecinito" inicio="12" />
-    <PrimeraClase titulo="Hola mundo cruel" inicio="86" />
-    <Deportes />
+    <Numeros />
   </React.StrictMode>,
   document.getElementById("root")
 );
