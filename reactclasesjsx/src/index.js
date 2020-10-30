@@ -3,15 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 //import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
+//!Declaracion de los componentes creados y utilizados en clase
 // import Deportes from "./components/comics/Deportes";
 // import Numeros from "./components/comics/Numeros";
 // import Comics from "./components/comics/Comics";
-import EjemploSimple from "./components/Formularios/EjemploSimple";
+//import EjemploSimple from "./components/Formularios/EjemploSimple";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <EjemploSimple />
-  </React.StrictMode>,
+  <React.StrictMode></React.StrictMode>,
   document.getElementById("root")
 );
 
