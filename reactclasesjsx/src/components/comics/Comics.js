@@ -50,9 +50,50 @@ class Comics extends React.Component {
       favorito: comic,
     });
   };
+
+  crearComic = () => {
+    let titulo = document.getElementById("cajaTitulo").value;
+    let imagen = document.getElementById("cajaImagen").value;
+    let descripcion = document.getElementById("cajaDescripcion").value;
+
+    let comic = {
+      titulo: titulo,
+      imagen: imagen,
+      descripcion: descripcion,
+    };
+    let comics = this.state.comics;
+    comics.push(comic);
+    //Actualizar para el render
+    this.setState({
+      comics: comics,
+    });
+  };
   render() {
     return (
       <div>
+        <div>
+          <label> Titulo: </label>
+          <input type="text" id="cajaTitulo" />
+          <br />
+          <label> Imágen: </label>
+          <input type="text" id="cajaImagen" />
+          <br />
+          <label> Descripción: </label>
+          <input type="text" id="cajaDescripcion" />
+          <br />
+          <button onClick={this.crearComic}>Crear Comic</button>
+        </div>
+        {this.state.favorito && (
+          <React.Fragment>
+            <div style={{ backgroundColor: "lightgreen" }}>
+              <h1 style={{ color: "Fuchsia" }}>
+                Favorito, {this.state.favorito.titulo}
+              </h1>
+              <img src={this.state.favorito.imagen} />
+              <h1>{this.state.favorito.descripcion}</h1>
+            </div>
+          </React.Fragment>
+        )}
         {this.state.comics.map((comic, index) => {
           return (
             <Comic
@@ -62,15 +103,6 @@ class Comics extends React.Component {
             />
           );
         })}
-        {this.state.favorito && (
-          <React.Fragment>
-            <h1 style={{ color: "Fuchsia" }}>
-              Favorito, {this.state.favorito.titulo}
-            </h1>
-            <img src={this.state.favorito.imagen} />
-            <h1>{this.state.favorito.descripcion}</h1>
-          </React.Fragment>
-        )}
       </div>
     );
   }
