@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
-import Comics from "./components/comics/Comics";
+// import Deportes from "./components/comics/Deportes";
+// import Numeros from "./components/comics/Numeros";
+// import Comics from "./components/comics/Comics";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Comics />
-  </React.StrictMode>,
+  <React.StrictMode></React.StrictMode>,
   document.getElementById("root")
 );
 
