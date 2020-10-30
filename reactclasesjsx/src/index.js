@@ -8,9 +8,12 @@ import reportWebVitals from "./reportWebVitals";
 // import Numeros from "./components/comics/Numeros";
 // import Comics from "./components/comics/Comics";
 //import EjemploSimple from "./components/Formularios/EjemploSimple";
+import Collatz from "./components/Collatz/Collatz";
 
 ReactDOM.render(
-  <React.StrictMode></React.StrictMode>,
+  <React.StrictMode>
+    <Collatz />
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
