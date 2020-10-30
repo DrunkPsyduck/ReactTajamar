@@ -6,7 +6,7 @@ class Television extends React.Component {
     return (
       <div>
         <h1>Componente television</h1>
-        <img src={LogoTelevision}></img>
+        <img src={LogoTelevision} alt="a"></img>
       </div>
     );
   }

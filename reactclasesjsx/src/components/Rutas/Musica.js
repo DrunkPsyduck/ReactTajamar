@@ -6,7 +6,7 @@ class Musica extends React.Component {
     return (
       <div>
         <h1>Componente Muscia</h1>
-        <img src={LogoMusica}></img>
+        <img src={LogoMusica} alt="a"></img>
       </div>
     );
   }

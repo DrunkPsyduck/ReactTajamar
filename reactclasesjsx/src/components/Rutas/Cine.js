@@ -6,7 +6,7 @@ class Cine extends React.Component {
     return (
       <div>
         <h1>Componente Cine</h1>
-        <img src={LogoCine}></img>
+        <img src={LogoCine} alt="a"></img>
       </div>
     );
   }

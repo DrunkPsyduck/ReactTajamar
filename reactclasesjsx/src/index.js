@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./components/App/App";
+//import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 // import Deportes from "./components/comics/Deportes";
 // import Numeros from "./components/comics/Numeros";
 // import Comics from "./components/comics/Comics";
+import EjemploSimple from "./components/Formularios/EjemploSimple";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <EjemploSimple />
   </React.StrictMode>,
   document.getElementById("root")
 );

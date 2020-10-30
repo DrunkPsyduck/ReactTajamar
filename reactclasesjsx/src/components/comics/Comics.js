@@ -119,7 +119,7 @@ class Comics extends React.Component {
               <h1 style={{ color: "Fuchsia" }}>
                 Favorito, {this.state.favorito.titulo}
               </h1>
-              <img src={this.state.favorito.imagen} />
+              <img src={this.state.favorito.imagen} alt="favorito" />
               <h1>{this.state.favorito.descripcion}</h1>
               <button onClick={this.eliminarFavorito}>Eliminar Favorito</button>
             </div>

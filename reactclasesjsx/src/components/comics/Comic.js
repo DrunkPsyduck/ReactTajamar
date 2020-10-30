@@ -6,7 +6,7 @@ class Comic extends React.Component {
     return (
       <div>
         <h1>{this.props.comic.titulo}</h1>
-        <img src={this.props.comic.imagen} />
+        <img src={this.props.comic.imagen} alt="alt" />
         <h1>{this.props.comic.descripcion}</h1>
         <button
           onClick={() => {
