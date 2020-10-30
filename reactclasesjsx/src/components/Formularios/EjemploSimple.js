@@ -11,6 +11,7 @@ export default class EjemploSimple extends Component {
 
   recibirDatos = (e) => {
     //Para trabajar en Front es necesario cortar el submit para trabajar
+    //No esta supeditado a hacerlo unicamente en el submit
     e.preventDefault();
     let user = {
       nombre: this.nombre.current.value,
@@ -31,10 +32,20 @@ export default class EjemploSimple extends Component {
         <form onSubmit={this.recibirDatos}>
           {/* En React htmlFor utiliza el atributo name del input */}
           <label htmlFor="nombre">Nombre</label>
-          <input type="text" ref={this.nombre} name="nombre" />
+          <input
+            type="text"
+            ref={this.nombre}
+            name="nombre"
+            onChange={this.recibirDatos}
+          />
           <br />
           <label htmlFor="apellidos">apellidos</label>
-          <input type="text" ref={this.apellidos} name="apellidos" />
+          <input
+            type="text"
+            ref={this.apellidos}
+            name="apellidos"
+            onChange={this.recibirDatos}
+          />
           <br />
           <button>Enviar Datos</button>
         </form>
