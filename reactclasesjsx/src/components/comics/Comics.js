@@ -68,6 +68,36 @@ class Comics extends React.Component {
       comics: comics,
     });
   };
+
+  eliminarComic = (index) => {
+    let comics = this.state.comics;
+    comics.splice(index, 1);
+    this.setState({
+      comics: comics,
+    });
+  };
+
+  eliminarFavorito = () => {
+    this.setState({
+      favorito: null,
+    });
+  };
+
+  updateComic = (index) => {
+    let titulo = document.getElementById("cajaTitulo").value;
+    let imagen = document.getElementById("cajaImagen").value;
+    let descripcion = document.getElementById("cajaDescripcion").value;
+
+    let comics = this.state.comics;
+    let comic = comics[index];
+    comic.titulo = titulo;
+    comic.imagen = imagen;
+    comic.descripcion = descripcion;
+
+    this.setState({
+      comics: comics,
+    });
+  };
   render() {
     return (
       <div>
@@ -81,7 +111,7 @@ class Comics extends React.Component {
           <label> Descripción: </label>
           <input type="text" id="cajaDescripcion" />
           <br />
-          <button onClick={this.crearComic}>Crear Comic</button>
+          <button onClick={this.crearComic}>Eliminar Favorito</button>
         </div>
         {this.state.favorito && (
           <React.Fragment>
@@ -91,16 +121,24 @@ class Comics extends React.Component {
               </h1>
               <img src={this.state.favorito.imagen} />
               <h1>{this.state.favorito.descripcion}</h1>
+              <button onClick={this.eliminarFavorito}>Eliminar Favorito</button>
             </div>
           </React.Fragment>
         )}
         {this.state.comics.map((comic, index) => {
           return (
-            <Comic
-              key={index}
-              comic={comic}
-              seleccionarComic={this.seleccionarComic}
-            />
+            <React.Fragment key={index}>
+              {/* Si existen diversos obejtos con la misma key, esta debe ponerse en el elemento padre, en este caso <React.Fragment> */}
+              <Comic
+                index={index}
+                comic={comic}
+                seleccionarComic={this.seleccionarComic}
+                eliminarComic={this.eliminarComic}
+              />
+              <button onClick={() => this.updateComic(index)}>
+                Modificar cómic
+              </button>
+            </React.Fragment>
           );
         })}
       </div>
