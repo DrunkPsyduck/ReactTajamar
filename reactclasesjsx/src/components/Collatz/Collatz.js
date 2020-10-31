@@ -6,9 +6,9 @@ export default class Collatz extends Component {
   state = {
     numeros: {},
   };
-  recibirNumero = (e) => {
+  recibirNumero = (e, numero) => {
     e.preventDefault();
-    let numero = parseInt(this.numero.current.value);
+
     if (numero === 0) {
       console.log("Numero 0");
     } else {
@@ -27,6 +27,16 @@ export default class Collatz extends Component {
     }
   };
 
+  recibirDatos = (e) => {
+    e.preventDefault();
+    let numero = parseInt(this.numero.current.value);
+    console.log(numero);
+    if (numero === 0 && numero < 0) {
+      return "Numero no valido";
+    } else {
+      this.recibirNumero(e, numero);
+    }
+  };
   render() {
     return (
       <div>
@@ -45,7 +55,7 @@ export default class Collatz extends Component {
         <form>
           <input type="number" ref={this.numero} />
           <br />
-          <button onClick={this.recibirNumero}>Calcular Conjetura</button>
+          <button onClick={this.recibirDatos}>Calcular Conjetura</button>
         </form>
       </div>
     );
