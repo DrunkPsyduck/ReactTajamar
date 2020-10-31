@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Collatz.css";
 
 export default class Collatz extends Component {
   numero = React.createRef();
@@ -9,21 +10,23 @@ export default class Collatz extends Component {
     e.preventDefault();
     // let numeroRecibido = { numero: this.numero.current.value };
     let numero = parseInt(this.numero.current.value);
-    let numeros = "";
+    if (numero === 0) {
+      console.log("Numero 0");
+    } else {
+      let numeros = [];
 
-    while (numero !== 1) {
-      if (numero % 2 === 0) {
-        numero /= 2;
-      } else {
-        numero *= 3;
-        numero += 1;
+      while (numero !== 1 && numero !== 0) {
+        if (numero % 2 === 0) {
+          numero /= 2;
+        } else {
+          numero *= 3;
+          numero += 1;
+        }
+        numeros.push(numero);
       }
-      numeros += numero + ",";
+      let objeto = { cadena: numeros };
+      this.setState({ numeros: objeto });
     }
-
-    let objeto = { cadena: numeros };
-    this.setState({ numeros: objeto });
-    console.log(this.state.numeros);
   };
 
   render() {
@@ -32,9 +35,13 @@ export default class Collatz extends Component {
         <h1>Conjetura de Collatz</h1>
 
         {this.state.numeros.cadena && (
-          <h1 style={{ backgroundColor: "black", color: "white" }}>
-            {this.state.numeros.cadena}
-          </h1>
+          <React.Fragment>
+            <ul>
+              {Object.keys(this.state.numeros.cadena).map((numero, i) => {
+                return <li key={numero}>{this.state.numeros.cadena[i]}</li>;
+              })}
+            </ul>
+          </React.Fragment>
         )}
 
         <form>
