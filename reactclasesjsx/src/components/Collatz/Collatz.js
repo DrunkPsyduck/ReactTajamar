@@ -8,13 +8,11 @@ export default class Collatz extends Component {
   };
   recibirNumero = (e) => {
     e.preventDefault();
-    // let numeroRecibido = { numero: this.numero.current.value };
     let numero = parseInt(this.numero.current.value);
     if (numero === 0) {
       console.log("Numero 0");
     } else {
       let numeros = [];
-
       while (numero !== 1 && numero !== 0) {
         if (numero % 2 === 0) {
           numero /= 2;
