@@ -4,6 +4,7 @@ export default class SeleccionSimple extends Component {
   seleccionado = React.createRef();
   state = {
     filas: [],
+    opciones: [],
   };
   generarOption = () => {
     let options = [];
@@ -15,8 +16,16 @@ export default class SeleccionSimple extends Component {
         </option>
       );
     }
-    return options;
+    this.setState({
+      opciones: options,
+    });
   };
+
+  //metodo para cargar los options solo una vez. Ciclo de vida
+  componentWillMount = () => {
+    this.generarOption();
+  };
+  compo;
   tablaMultiplicar = (e) => {
     e.preventDefault();
     let numero = parseInt(this.seleccionado.current.value);
@@ -40,7 +49,7 @@ export default class SeleccionSimple extends Component {
         <h1>Selección de elemento</h1>
         <form onSubmit={this.tablaMultiplicar}>
           <select name="selectNumeros" ref={this.seleccionado}>
-            {this.generarOption()}
+            {this.state.opciones}
             {/* Con los parentesis se ejecuta al cargar. Sin ellos espera al usuario para ejecutarsre */}
           </select>
           <button>Generar tabla</button>

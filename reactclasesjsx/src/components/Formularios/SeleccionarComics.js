@@ -72,9 +72,8 @@ export default class SeleccionarComics extends Component {
         }
       }
     }
-    console.log(comic, this.state.comics);
+
     this.setState({ seleccionado: comic });
-    console.log(this.state.seleccionado);
   };
   render() {
     return (
