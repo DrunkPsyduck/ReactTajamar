@@ -9,6 +9,7 @@ export default class Customer extends Component {
   cargarClientes = () => {
     axios.get(this.urlCustomers).then((res) => {
       console.log(res.data.customers);
+      this.setState({ customers: res.data.customers });
     });
   };
 
@@ -16,6 +17,13 @@ export default class Customer extends Component {
     this.cargarClientes();
   };
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>Servicios API Customer</h1>
+        {this.state.customers.map((cliente) => {
+          return <h2 key={cliente.id}>{cliente.contactName}</h2>;
+        })}
+      </div>
+    );
   }
 }
