@@ -9,9 +9,7 @@ export default class Collatz extends Component {
   recibirNumero = (e, numero) => {
     e.preventDefault();
 
-    if (numero === 0) {
-      console.log("Numero 0");
-    } else {
+    if (numero !== 0) {
       let numeros = [];
       while (numero !== 1 && numero !== 0) {
         if (numero % 2 === 0) {
@@ -31,9 +29,7 @@ export default class Collatz extends Component {
     e.preventDefault();
     let numero = parseInt(this.numero.current.value);
     console.log(numero);
-    if (numero === 0 && numero < 0) {
-      return "Numero no valido";
-    } else {
+    if (numero !== 0 && numero > 1) {
       this.recibirNumero(e, numero);
     }
   };
