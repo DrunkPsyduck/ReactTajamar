@@ -28,7 +28,6 @@ export default class Collatz extends Component {
   recibirDatos = (e) => {
     e.preventDefault();
     let numero = parseInt(this.numero.current.value);
-    console.log(numero);
     if (numero !== 0 && numero > 1) {
       this.recibirNumero(e, numero);
     }
