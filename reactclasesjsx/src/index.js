@@ -10,12 +10,14 @@ import reportWebVitals from "./reportWebVitals";
 //import EjemploSimple from "./components/Formularios/EjemploSimple";
 //import Collatz from "./components/Collatz/Collatz";
 //import SeleccionSimple from "./components/Formularios/SeleccionSimple";
-//import SeleccionMultiple from "./components/Formularios/SeleccionMultiple";
-import SeleccionarComics from "./components/Formularios/SeleccionarComics";
+// import SeleccionMultiple from "./components/Formularios/SeleccionMultiple";
+// import SeleccionarComics from "./components/Formularios/SeleccionarComics";
+// import SeleccionSimple from "./components/Formularios/SeleccionSimple";
+import SeleccionComponent from "./components/Formularios/SeleccionComponent";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SeleccionarComics />
+    <SeleccionComponent />
   </React.StrictMode>,
   document.getElementById("root")
 );
