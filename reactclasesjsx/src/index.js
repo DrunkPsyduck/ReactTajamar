@@ -10,11 +10,12 @@ import reportWebVitals from "./reportWebVitals";
 //import EjemploSimple from "./components/Formularios/EjemploSimple";
 //import Collatz from "./components/Collatz/Collatz";
 //import SeleccionSimple from "./components/Formularios/SeleccionSimple";
-import SeleccionMultiple from "./components/Formularios/SeleccionMultiple";
+//import SeleccionMultiple from "./components/Formularios/SeleccionMultiple";
+import SeleccionarComics from "./components/Formularios/SeleccionarComics";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SeleccionMultiple />
+    <SeleccionarComics />
   </React.StrictMode>,
   document.getElementById("root")
 );
