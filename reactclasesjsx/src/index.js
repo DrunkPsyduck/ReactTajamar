@@ -11,7 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 //import Collatz from "./components/Collatz/Collatz";
 //import SeleccionSimple from "./components/Formularios/SeleccionSimple";
 // import SeleccionMultiple from "./components/Formularios/SeleccionMultiple";
-// import SeleccionarComics from "./components/Formularios/SeleccionarComics";
+import SeleccionarComics from "./components/Formularios/SeleccionarComics";
 // import SeleccionSimple from "./components/Formularios/SeleccionSimple";
 import SeleccionComponent from "./components/Formularios/SeleccionComponent";
 

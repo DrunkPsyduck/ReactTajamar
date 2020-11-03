@@ -29,15 +29,24 @@ export default class seleccionComponent extends Component {
       console.log(`Option selected:`, this.state.selectedOption)
     );
   };
+  mostrarSeleccionado = (seleccionado) => {
+    this.setState({
+      selectedOption: seleccionado,
+      seleccionados: seleccionado.value,
+    });
+  };
 
   render() {
     return (
       <div>
         <h1>Select componente externo</h1>
         <Select
+          isMulti
           value={this.state.selectedOption}
+          onChange={this.mostrarSeleccionado}
           options={this.state.opciones}
         />
+        <h2 style={{ color: "red" }}>{this.state.seleccionados}</h2>
       </div>
     );
   }

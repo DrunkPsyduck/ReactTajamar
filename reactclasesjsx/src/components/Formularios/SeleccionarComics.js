@@ -42,6 +42,7 @@ export default class SeleccionarComics extends Component {
         descripcion: "Murcielago",
       },
     ],
+    seleccionados: [],
   };
 
   generarOption = () => {
@@ -73,7 +74,7 @@ export default class SeleccionarComics extends Component {
     }
 
     this.setState({ seleccionado: comic });
-    console.log(comic);
+    console.log(this.state);
   };
   render() {
     return (
