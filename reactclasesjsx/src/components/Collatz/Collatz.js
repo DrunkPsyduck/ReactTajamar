@@ -15,8 +15,7 @@ export default class Collatz extends Component {
         if (numero % 2 === 0) {
           numero /= 2;
         } else {
-          numero *= 3;
-          numero += 1;
+          numero = numero * 3 + 1;
         }
         numeros.push(numero);
       }
@@ -41,7 +40,7 @@ export default class Collatz extends Component {
           <React.Fragment>
             <ul>
               {Object.keys(this.state.numeros.cadena).map((numero, i) => {
-                return <li key={numero}>{this.state.numeros.cadena[i]}</li>;
+                return <li key={i}>{this.state.numeros.cadena[i]}</li>;
               })}
             </ul>
           </React.Fragment>
