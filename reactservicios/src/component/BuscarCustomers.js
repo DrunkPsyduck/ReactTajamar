@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Global from "./../Global";
+
 export default class BuscarCustomers extends Component {
   cajaCustomerRef = React.createRef();
 
@@ -11,7 +13,8 @@ export default class BuscarCustomers extends Component {
   buscarCliente = (e) => {
     e.preventDefault();
     let idCLiente = this.cajaCustomerRef.current.value;
-    let url = "http://northwind.netcore.io/customers/" + idCLiente + ".json";
+    let request = "customers/" + idCLiente + ".json";
+    let url = Global.urlNorthWind + request;
     axios.get(url).then((res) => {
       this.setState({
         customer: res.data.customer,
