@@ -23,7 +23,7 @@ export default class Departamentos extends Component {
       <div>
         <h1>Departamentos</h1>
         {this.state.status && (
-          <table className="table tabel-bordered">
+          <table className="table table-bordered">
             <thead>
               <tr>
                 <th>Número</th>
