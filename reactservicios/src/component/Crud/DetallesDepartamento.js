@@ -35,6 +35,9 @@ export default class DetallesDepartamento extends Component {
         <h2>Detalles del departamento</h2>
         {this.state.status && (
           <React.Fragment>
+            <a href="/" className="btn btn-primary">
+              Volver
+            </a>
             <h3 className="text-primary">
               Numero: {this.state.departamento.numero}
             </h3>
@@ -44,6 +47,12 @@ export default class DetallesDepartamento extends Component {
             <h3 className="text-primary">
               Localidad: {this.state.departamento.localidad}
             </h3>
+            <a
+              href={"/update/" + this.state.departamento.numero}
+              className="btn btn-warning"
+            >
+              Modificar
+            </a>
           </React.Fragment>
         )}
       </div>

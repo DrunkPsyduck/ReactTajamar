@@ -4,6 +4,7 @@ import EmpleadoDetalles from "./RutasEmpleado/EmpleadoDetalles";
 import Departamentos from "./Crud/Departamentos";
 import InsertarDepartamento from "./Crud/InsertarDepartamento";
 import DetallesDepartamento from "./Crud/DetallesDepartamento";
+import UpdateDepartamento from "./Crud/UpdateDepartamento";
 export default class Router extends Component {
   render() {
     return (
@@ -17,6 +18,22 @@ export default class Router extends Component {
             render={(props) => {
               let id = props.match.params.id;
               return <DetallesDepartamento idDepartamento={id} />;
+            }}
+          ></Route>
+          <Route
+            exact
+            path="/update/:id/:nombre/:localidad"
+            render={(props) => {
+              let id = props.match.params.id;
+              let nombre = props.match.params.nombre;
+              let localidad = props.match.params.localidad;
+              return (
+                <UpdateDepartamento
+                  idDepartamento={id}
+                  nombre={nombre}
+                  localidad={localidad}
+                />
+              );
             }}
           ></Route>
           <Route

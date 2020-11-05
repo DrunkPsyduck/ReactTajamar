@@ -5,7 +5,7 @@ export default class MenuDepartamentos extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="/">
-          Navbar
+          Departamentos
         </a>
         <button
           className="navbar-toggler"
