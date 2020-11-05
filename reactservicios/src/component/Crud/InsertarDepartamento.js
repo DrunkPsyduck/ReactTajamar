@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Global from "../../Global";
 import axios from "axios";
-
+import { Redirect } from "react-router-dom";
 export default class InsertarDepartamento extends Component {
   cajaNumeroRef = React.createRef();
   cajaNombreRef = React.createRef();
@@ -31,6 +31,9 @@ export default class InsertarDepartamento extends Component {
     });
   };
   render() {
+    if (this.state.status) {
+      return <Redirect to="/" />;
+    }
     return (
       <div>
         <h1>Nuevo departamento</h1>
@@ -62,9 +65,6 @@ export default class InsertarDepartamento extends Component {
           <button className="btn btn-secondary">Insertar Departamento</button>
         </form>
         <br />
-        {this.state.status && (
-          <h3 className="alert alert-success">{this.state.mensaje}</h3>
-        )}
       </div>
     );
   }
