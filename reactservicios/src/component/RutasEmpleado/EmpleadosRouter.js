@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Global from "./../../Global";
 import axios from "axios";
-
+import "./Estilos.css";
 export default class EmpleadosRouter extends Component {
   state = {
     empleados: [],
