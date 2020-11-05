@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <MenuDepartamentos />
-      <Departamentos />
+
       <hr />
       <Router />
     </div>
