@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Global from "./../../Global";
+import Empleados from "./Empleados";
 
 export default class Departamentos extends Component {
   state = {
@@ -23,7 +24,6 @@ export default class Departamentos extends Component {
     if (dpt !== "Seleccione departamento") {
       this.setState({ departamento: dpt });
     }
-    console.log(this.state);
   };
 
   buscarEmpleados = () => {
@@ -31,7 +31,6 @@ export default class Departamentos extends Component {
     axios.get(Global.empleados + request).then((res) => {
       this.setState({ empleados: res.data, status: "Success" });
     });
-    console.log(this.state);
   };
 
   render() {
@@ -51,13 +50,7 @@ export default class Departamentos extends Component {
         <button onClick={this.buscarEmpleados}>Buscar Empleados</button>
 
         {this.state.status === "Success" && (
-          <div>
-            <ul>
-              {this.state.empleados.map((emp, index) => {
-                return <li key={index}>{emp.apellido}</li>;
-              })}
-            </ul>
-          </div>
+          <Empleados idDepartamento={this.state.departamento} />
         )}
       </div>
     );
