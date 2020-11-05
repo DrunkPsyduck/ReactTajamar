@@ -11,7 +11,7 @@ export default class DetallesDepartamento extends Component {
   }
 
   state = {
-    departamento: {},
+    departamento: [],
     status: false,
     idDepartamento: 0,
   };
