@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import EmpleadoDetalles from "./RutasEmpleado/EmpleadoDetalles";
 import Departamentos from "./Crud/Departamentos";
 import InsertarDepartamento from "./Crud/InsertarDepartamento";
+import DetallesDepartamento from "./Crud/DetallesDepartamento";
 export default class Router extends Component {
   render() {
     return (
@@ -10,6 +11,7 @@ export default class Router extends Component {
         <Switch>
           <Route exact path="/" component={Departamentos}></Route>
           <Route exact path="/create" component={InsertarDepartamento}></Route>
+          <Route exact path="/details" component={DetallesDepartamento}></Route>
           <Route
             exact
             path="/empleadoDetalles/:idEmpleado"
