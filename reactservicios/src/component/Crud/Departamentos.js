@@ -34,10 +34,10 @@ export default class Departamentos extends Component {
             <tbody>
               {this.state.departamentos.map((dept, index) => {
                 return (
-                  <tr>
-                    <td>{dept.numero}</td>
-                    <td>{dept.nombre}</td>
-                    <td>{dept.localidad}</td>
+                  <tr key={index}>
+                    <td key={dept.numero}>{dept.numero}</td>
+                    <td key={dept.nombre}>{dept.nombre}</td>
+                    <td key={dept.localidad}>{dept.localidad}</td>
                   </tr>
                 );
               })}
