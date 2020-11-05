@@ -11,10 +11,17 @@ export default class Router extends Component {
         <Switch>
           <Route exact path="/" component={Departamentos}></Route>
           <Route exact path="/create" component={InsertarDepartamento}></Route>
-          <Route exact path="/details" component={DetallesDepartamento}></Route>
           <Route
             exact
-            path="/empleadoDetalles/:idEmpleado"
+            path="/details/:id"
+            render={(props) => {
+              let id = props.match.params.id;
+              return <DetallesDepartamento idDepartamento={id} />;
+            }}
+          ></Route>
+          <Route
+            exact
+            path="/empleadoDetalles/idEmpleado"
             render={(props) => {
               var idEmp = props.match.params.idEmpleado;
               console.log("ID " + idEmp);

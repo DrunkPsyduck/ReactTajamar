@@ -6,7 +6,7 @@ export default class DetallesDepartamento extends Component {
   constructor(props) {
     super(props);
     this.setState({
-      idDepartamento: props.iddepartamento,
+      idDepartamento: props.idDepartamento,
     });
   }
 
@@ -17,7 +17,7 @@ export default class DetallesDepartamento extends Component {
   };
 
   buscarDepartamento = () => {
-    let request = "/api/departamentos" + this.state.idDepartamento;
+    let request = "/api/departamentos/" + this.props.idDepartamento;
     axios.get(Global.urlCrudDept + request).then((res) => {
       this.setState({
         departamento: res.data,
@@ -31,12 +31,19 @@ export default class DetallesDepartamento extends Component {
   render() {
     return (
       <div>
+        <br />
         <h2>Detalles del departamento</h2>
         {this.state.status && (
           <React.Fragment>
-            <h3>Numero: {this.state.departamento.numero}</h3>
-            <h3>Nombre: {this.state.departamento.nombre}</h3>
-            <h3>Localidad: {this.state.departamento.localidad}</h3>
+            <h3 className="text-primary">
+              Numero: {this.state.departamento.numero}
+            </h3>
+            <h3 className="text-primary">
+              Nombre: {this.state.departamento.nombre}
+            </h3>
+            <h3 className="text-primary">
+              Localidad: {this.state.departamento.localidad}
+            </h3>
           </React.Fragment>
         )}
       </div>
