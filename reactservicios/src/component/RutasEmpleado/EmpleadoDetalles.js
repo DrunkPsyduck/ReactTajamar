@@ -20,7 +20,6 @@ export default class EmpleadoDetalles extends Component {
         status: true,
       });
     });
-    console.log(this.state);
   };
 
   componentDidMount = () => {

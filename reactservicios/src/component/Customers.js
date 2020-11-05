@@ -38,13 +38,13 @@ export default class Customer extends Component {
       //*otra opcion
       return <h1>Algo ha ido mal</h1>;
     }
-    return (
-      <div>
-        <h1>Servicios API Customer</h1>
-        {this.state.customers.map((cliente) => {
-          return <h2 key={cliente.id}>{cliente.contactName}</h2>;
-        })}
-      </div>
-    );
+    // return (
+    //   <div>
+    //     <h1>Servicios API Customer</h1>
+    //     {this.state.customers.map((cliente) => {
+    //       return <h2 key={cliente.id}>{cliente.contactName}</h2>;
+    //     })}
+    //   </div>
+    // );
   }
 }
