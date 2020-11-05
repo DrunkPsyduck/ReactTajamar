@@ -10,13 +10,17 @@ export default class Empleados extends Component {
 
   cargarEmpleados = () => {
     let idDept = this.props.idDepartamento;
-    let request = "Empleados/EmpleadosDepartamento/" + idDept;
+    let request = "api/Empleados/EmpleadosDepartamento/" + idDept;
     axios.get(Global.empleados + request).then((res) => {
       this.setState({ empleados: res.data, status: "Success" });
     });
   };
 
   componentDidMount = () => {
+    this.cargarEmpleados();
+  };
+
+  componentDidUpdate = () => {
     this.cargarEmpleados();
   };
   render() {

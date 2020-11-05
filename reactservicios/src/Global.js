@@ -3,7 +3,7 @@ let Global = {
   coches: "https://apicochespaco.azurewebsites.net/",
   departamentos:
     "https://apidepartamentospgs.azurewebsites.net/api/departamentos/",
-  empleados: "https://apiempleadosfullstack.azurewebsites.net/api/",
+  empleados: "https://apiempleadosfullstack.azurewebsites.net/",
 };
 
 export default Global;

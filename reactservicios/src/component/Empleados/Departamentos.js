@@ -12,7 +12,7 @@ export default class Departamentos extends Component {
   };
   cargarDepartamentos = () => {
     axios.get(Global.departamentos).then((res) => {
-      this.setState({ departamentos: res.data });
+      this.setState({ departamentos: res.data, status: "Success" });
     });
   };
   componentDidMount = () => {
@@ -20,17 +20,11 @@ export default class Departamentos extends Component {
   };
 
   guardaValor = (e) => {
+    e.preventDefault();
     let dpt = e.target.value;
     if (dpt !== "Seleccione departamento") {
       this.setState({ departamento: dpt });
     }
-  };
-
-  buscarEmpleados = () => {
-    let request = "Empleados/EmpleadosDepartamento/" + this.state.departamento;
-    axios.get(Global.empleados + request).then((res) => {
-      this.setState({ empleados: res.data, status: "Success" });
-    });
   };
 
   render() {
@@ -47,7 +41,7 @@ export default class Departamentos extends Component {
             );
           })}
         </select>
-        <button onClick={this.buscarEmpleados}>Buscar Empleados</button>
+        <button>Buscar Empleados</button>
 
         {this.state.status === "Success" && (
           <Empleados idDepartamento={this.state.departamento} />
