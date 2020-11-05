@@ -4,11 +4,10 @@ import "./App.css";
 //import Coches from "./../Coches";
 // import Departamentos from "./../Empleados/Departamentos";
 import Router from "./../Router";
-import EmpleadosRouter from "./../RutasEmpleado/EmpleadosRouter";
+//import EmpleadosRouter from "./../RutasEmpleado/EmpleadosRouter";
 function App() {
   return (
     <div className="App">
-      <EmpleadosRouter />
       <hr />
       <Router />
     </div>
