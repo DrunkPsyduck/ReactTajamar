@@ -4,8 +4,7 @@ let Global = {
   departamentos:
     "https://apidepartamentospgs.azurewebsites.net/api/departamentos/",
   empleados: "https://apiempleadosfullstack.azurewebsites.net/",
-  urlCrudDept:
-    "https://apicruddepartamentospgs.azurewebsites.net/webresources/departamentos",
+  urlCrudDept: "https://apicruddepartamentoscore.azurewebsites.net/",
 };
 
 export default Global;
