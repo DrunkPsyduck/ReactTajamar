@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Global from "./../../Global";
+import { NavLink } from "react-router-dom";
 
 export default class DetallesDepartamento extends Component {
   constructor(props) {
@@ -60,6 +61,20 @@ export default class DetallesDepartamento extends Component {
             >
               Modificar
             </a>
+            <a
+              href={"/delete/" + this.state.departamento.numero}
+              className="btn btn-danger"
+            >
+              Borrar
+            </a>
+            <hr />
+            {/* Los NavLink se utilizan para enlaces internos, los <a> para enlaces externos */}
+            <NavLink
+              to={"/delete/" + this.state.departamento.numero}
+              className="btn btn-primary"
+            >
+              Delete NavLink
+            </NavLink>
           </React.Fragment>
         )}
       </div>

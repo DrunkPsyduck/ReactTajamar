@@ -5,6 +5,7 @@ import Departamentos from "./Crud/Departamentos";
 import InsertarDepartamento from "./Crud/InsertarDepartamento";
 import DetallesDepartamento from "./Crud/DetallesDepartamento";
 import UpdateDepartamento from "./Crud/UpdateDepartamento";
+import DeleteDepartamento from "./Crud/DeleteDepartamento";
 export default class Router extends Component {
   render() {
     return (
@@ -36,6 +37,14 @@ export default class Router extends Component {
               );
             }}
           ></Route>
+          <Route
+            exact
+            path="/delete/:id"
+            render={(props) => {
+              let id = props.match.params.id;
+              return <DeleteDepartamento idDepartamento={id} />;
+            }}
+          />
           <Route
             exact
             path="/empleadoDetalles/idEmpleado"
