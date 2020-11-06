@@ -11,6 +11,8 @@ export default class Router extends Component {
   render() {
     return (
       <BrowserRouter>
+        {/* Como no se puede poner NavLink fuera de Router es necesario que los elementos que utilizan NavLink esten llamados en Router
+       Como no son elementos que cambien se tienen que poner antes del switch*/}
         <MenuDepartamentos />
         <Switch>
           <Route exact path="/" component={Departamentos}></Route>
