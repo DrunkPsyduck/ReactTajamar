@@ -48,7 +48,14 @@ export default class DetallesDepartamento extends Component {
               Localidad: {this.state.departamento.localidad}
             </h3>
             <a
-              href={"/update/" + this.state.departamento.numero}
+              href={
+                "/update/" +
+                this.state.departamento.numero +
+                "/" +
+                this.state.departamento.nombre +
+                "/" +
+                this.state.departamento.localidad
+              }
               className="btn btn-warning"
             >
               Modificar
