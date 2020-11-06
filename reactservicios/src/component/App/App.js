@@ -10,7 +10,7 @@ import $ from "jquery";
 import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Departamentos from "./../Crud/Departamentos";
-import MenuDepartamentos from "./../Crud/MenuDepartamentos";
+
 function App() {
   return (
     <div className="App">
