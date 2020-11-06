@@ -48,8 +48,8 @@ export default class DetallesDepartamento extends Component {
             <h3 className="text-primary">
               Localidad: {this.state.departamento.localidad}
             </h3>
-            <a
-              href={
+            <NavLink
+              to={
                 "/update/" +
                 this.state.departamento.numero +
                 "/" +
@@ -60,13 +60,13 @@ export default class DetallesDepartamento extends Component {
               className="btn btn-warning"
             >
               Modificar
-            </a>
-            <a
-              href={"/delete/" + this.state.departamento.numero}
+            </NavLink>
+            <NavLink
+              to={"/delete/" + this.state.departamento.numero}
               className="btn btn-danger"
             >
               Borrar
-            </a>
+            </NavLink>
             <hr />
             {/* Los NavLink se utilizan para enlaces internos, los <a> para enlaces externos */}
             <NavLink

@@ -6,10 +6,12 @@ import InsertarDepartamento from "./Crud/InsertarDepartamento";
 import DetallesDepartamento from "./Crud/DetallesDepartamento";
 import UpdateDepartamento from "./Crud/UpdateDepartamento";
 import DeleteDepartamento from "./Crud/DeleteDepartamento";
+import MenuDepartamentos from "./Crud/MenuDepartamentos";
 export default class Router extends Component {
   render() {
     return (
       <BrowserRouter>
+        <MenuDepartamentos />
         <Switch>
           <Route exact path="/" component={Departamentos}></Route>
           <Route exact path="/create" component={InsertarDepartamento}></Route>

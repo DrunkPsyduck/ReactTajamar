@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 export default class MenuDepartamentos extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/">
           Departamentos
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,29 +22,9 @@ export default class MenuDepartamentos extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/create">
+              <NavLink className="nav-link" to="/create">
                 Nuevo departamento
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
